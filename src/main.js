@@ -93,7 +93,7 @@ function analyzeSalesData(data, options) {
         });
     });
 
-    const sortedSellers = sellerStats.toSorted((a, b) => {
+    const sortedSellers = [...sellerStats].sort((a, b) => {
         if (a.profit > b.profit) {
             return -1;
         }
