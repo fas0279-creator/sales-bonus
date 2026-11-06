@@ -108,7 +108,7 @@ function analyzeSalesData(data, options) {
 
         const topProducts = Object.entries(seller.products_sold).map(([sku, quantity]) => {
             return {sku, quantity};
-        }).toSorted((a, b) => {
+        }).sort((a, b) => {
         if (a.quantity > b.quantity) {
             return -1;
         }
